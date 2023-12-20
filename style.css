@@ -169,9 +169,15 @@ html {
   position: absolute;
   top: 2vw;
   left: 80%;
-  height: 80%;
+  height: 0;
   width: 0.2rem;
   background-color: #fff;
+  transition: height 0.5s;
+  z-index: 10;
+}
+
+.gallery-link:hover::before {
+  height: 80%;
 }
 .gallery-link::after {
   content: "";
@@ -179,8 +185,13 @@ html {
   top: 30%;
   left: 2rem;
   height: 0.2rem;
-  width: 90%;
+  width: 0;
   background-color: #fff;
+  transition: width 0.5s;
+}
+
+.gallery-link:hover::after {
+  width: 90%;
 }
 
 .food-img {
@@ -189,6 +200,15 @@ html {
   object-fit: cover;
   box-shadow: 0.3rem 0.3rem 0.1rem #a79a2d, 0.5rem 0.5rem 0.1rem #e34523,
     0.7rem 0.7rem 0.1rem #356643, 0.9rem 0.9rem 0.1rem #884564;
+  transition: all 0.5s;
+}
+
+.gallery-link:hover .food-img {
+  box-shadow: 1rem 1rem 0.1rem #a79a2d, 2rem 2rem 0.1rem #e34523,
+    3rem 3rem 0.1rem #356643, 4rem 4rem 0.1rem #884564;
+  filter: blur(0.5rem);
+  opacity: 0.5;
+  transform: scale(1.1);
 }
 
 .food-name {
@@ -200,6 +220,14 @@ html {
   color: #fff;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+  width: 0;
+  overflow: hidden;
+  transition: width 1s;
+}
+
+.gallery-link:hover .food-name {
+  width: 100%;
+  transition: width 1s 0.3s;
 }
 
 .food-description {
@@ -212,6 +240,15 @@ html {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
 }
 
 /* end of section 3 */
