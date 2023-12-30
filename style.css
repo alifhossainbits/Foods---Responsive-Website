@@ -107,6 +107,7 @@ html {
   box-shadow: 0.1rem 0.1rem 0.1rem #000, -0.1rem -0.1rem 0.1rem #000;
   cursor: pointer;
   transition: top 0.4s 0.2s;
+  z-index: 100;
 }
 
 .menu-nav.change {
@@ -431,3 +432,152 @@ html {
 }
 
 /* end of section 4 */
+
+/* Responsive */
+
+/**********************************/
+/* 1400px - Smaller desktop */
+/**********************************/
+
+@media (max-width: 87em) {
+  .section-heading {
+    font-size: 10rem;
+  }
+
+  .section-1-icons i {
+    font-size: 30rem;
+  }
+
+  .section-2 {
+    height: auto;
+    padding: 10rem 0 12rem 0;
+  }
+
+  .card-container {
+    margin-top: 10rem;
+  }
+
+  .gallery-link {
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem;
+  }
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/**********************************/
+/* 940px - tablet */
+/**********************************/
+
+@media (max-width: 59em) {
+  .navbar-link {
+    margin: 2rem;
+  }
+
+  .navbar-link i {
+    font-size: 4rem;
+  }
+
+  .navbar-link span {
+    font-size: 2rem;
+  }
+
+  .section-heading {
+    font-size: 8rem;
+  }
+
+  .section-1-icons i {
+    font-size: 25rem;
+  }
+  .card {
+    width: 25rem;
+  }
+  .section-4-heading {
+    font-size: 2rem;
+  }
+  .section-4-paragraph {
+    font-size: 1rem;
+  }
+
+  .signup-form-input {
+    width: 30rem;
+    height: 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .signup-form-btn {
+    left: -4rem;
+  }
+}
+/**********************************/
+/* 740px - smaller tablet */
+/**********************************/
+@media (max-width: 47em) {
+  .navbar {
+    height: 10rem;
+  }
+  .navbar-link {
+    margin: 1rem;
+  }
+
+  .navbar-link i {
+    font-size: 2rem;
+  }
+
+  .navbar-link span {
+    font-size: 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 5rem;
+  }
+
+  .section-1-icons i {
+    font-size: 20rem;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 5rem;
+  }
+}
+
+/**********************************/
+/* 600px - phone */
+/**********************************/
+
+@media (max-width: 38em) {
+  .section-heading {
+    font-size: 4rem;
+  }
+
+  .section-1-icons i {
+    font-size: 20rem;
+  }
+
+  .signup-form-input {
+    width: 30rem;
+    height: 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .signup-form-btn {
+    left: -4rem;
+  }
+
+  .section-4 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+/* end of Responsive */
